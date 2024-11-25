@@ -1,27 +1,20 @@
-FROM python:3.8-slim
+# Use a base image with Python 3.9
+FROM python:3.9-slim
 
-# Install system dependencies (to handle TensorFlow and other requirements)
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    libssl-dev \
-    libffi-dev \
-    libpq-dev \
-    curl \
-    && apt-get clean
-
-# Set environment variables
-ENV PYTHONUNBUFFERED 1
-
-# Set working directory
+# Set the working directory
 WORKDIR /app
 
-# Copy requirements file and install dependencies
+# Copy the requirements.txt file into the container
 COPY requirements.txt /app/
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the app code
+# Install the necessary dependencies
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# Copy the rest of the application into the container
 COPY . /app/
 
-# Expose port and run the app
+# Expose the application port
 EXPOSE 5000
+
+# Define the command to run your app
 CMD ["python", "app.py"]

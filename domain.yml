@@ -1,0 +1,21 @@
+version: "2.0"
+
+intents:
+  - greet
+  - ask_date
+
+entities:
+  - date
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_ask_date:
+    - text: "Today's date is: {date}"
+
+actions:
+  - action_show_date
+
+slots:
+  date:
+    type: text

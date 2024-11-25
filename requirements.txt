@@ -1,10 +1,6 @@
-rasa==3.1.0
-tensorflow==2.10.0
-scikit-learn==1.0.2
-spacy==3.2.0
-pandas==1.4.2
-requests==2.26.0
-flask==2.0.1
-flask-cors==3.1.1
-pyyaml==5.4.1
-python-dotenv==0.19.2
+rasa==3.5.0  # Update to a compatible version
+tensorflow==2.10.0  # Or any other necessary version
+Flask==2.1.1  # Flask version as required for your app
+nltk==3.6.7  # Natural Language Toolkit for NLP
+requests==2.28.1  # Requests version for HTTP requests
+other-libraries==x.x.x  # Any other dependencies required for your chatbot

@@ -14,7 +14,7 @@ services:
     plan: free
     regions:
       - oregon
-    pythonVersion: "3.11.10" # Make sure this matches your required Python version
+    pythonVersion: "3.8" # Make sure this matches your required Python version
     deployOnPush: true
     git:
       repo: "https://github.com/rocky566/RASA-CHATBOT"

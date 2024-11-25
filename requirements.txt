@@ -1,6 +1,15 @@
 Flask==2.2.3
-rasa==3.7.0   # Make sure this version is compatible with your Python version (e.g., Python 3.11)
-Flask-SocketIO==5.3.0
-python-dotenv==0.21.0
-requests==2.28.1
-tensorflow==2.11.0   # or any version of TensorFlow that suits your use case
+Flask-SQLAlchemy==2.5.1  # If you need database support with SQLAlchemy
+Flask-Login==0.6.2  # If you're managing user sessions
+Flask-WTF==1.0.1  # If you're using forms in your Flask app
+Flask-Cors==3.1.1  # If you need Cross-Origin Resource Sharing support
+Flask-RESTful==0.3.9  # For building RESTful APIs with Flask
+Flask-Mail==0.9.1  # If you're sending emails via your app
+rasa==3.4.0  # Update Rasa to a compatible version
+gunicorn==20.1.0  # Production-ready web server for deploying Flask apps
+python-dotenv==0.21.1  # For loading environment variables
+requests==2.28.1  # If you're making HTTP requests
+numpy==1.23.3  # Often required for machine learning models like Rasa
+pandas==1.5.3  # Useful for data manipulation, commonly used with Rasa
+scikit-learn==1.2.0  # If you're working with machine learning models
+tensorflow==2.13.0  # Optional, if you plan to use TensorFlow with Rasa

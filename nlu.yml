@@ -1,0 +1,15 @@
+version: "2.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey there
+      - greetings
+
+  - intent: ask_date
+    examples: |
+      - what's the date today?
+      - tell me the date
+      - what's today's date?

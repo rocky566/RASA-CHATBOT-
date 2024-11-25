@@ -1,0 +1,16 @@
+version: "2.0"
+
+language: "en"  # You can change this to support other languages
+
+pipeline:
+  - name: "SpacyNLP"
+    model: "en_core_web_trf"  # Transformer-based language model for better accuracy
+  - name: "SpacyEntityExtractor"
+  - name: "DIETClassifier"
+  - name: "EntitySynonymMapper"
+  - name: "ResponseSelector"
+  - name: "FallbackClassifier"
+
+policy:
+  - name: "MemoizationPolicy"
+  - name: "RulePolicy"

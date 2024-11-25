@@ -1,5 +1,14 @@
 FROM python:3.8-slim
 
+# Install system dependencies (to handle TensorFlow and other requirements)
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    libpq-dev \
+    curl \
+    && apt-get clean
+
 # Set environment variables
 ENV PYTHONUNBUFFERED 1
 

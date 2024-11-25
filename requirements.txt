@@ -1,6 +1,6 @@
-rasa==3.5.0  # Update to a compatible version
-tensorflow==2.10.0  # Or any other necessary version
-Flask==2.1.1  # Flask version as required for your app
-nltk==3.6.7  # Natural Language Toolkit for NLP
-requests==2.28.1  # Requests version for HTTP requests
-other-libraries==x.x.x  # Any other dependencies required for your chatbot
+Flask==2.2.3
+rasa==3.7.0   # Make sure this version is compatible with your Python version (e.g., Python 3.11)
+Flask-SocketIO==5.3.0
+python-dotenv==0.21.0
+requests==2.28.1
+tensorflow==2.11.0   # or any version of TensorFlow that suits your use case

@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: rasa-chatbot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python -m rasa run --enable-api --cors '*'"
+    envVars:
+      - key: RASA_X_ENABLED
+        value: "true"
+      - key: RASA_X_PASSWORD
+        value: "your_password_here"
+      - key: RASA_X_USER
+        value: "admin"
+    plan: free
+    regions:
+      - oregon
+    pythonVersion: "3.11.10" # Make sure this matches your required Python version
+    deployOnPush: true
+    git:
+      repo: "https://github.com/rocky566/RASA-CHATBOT"
+      branch: "main"
